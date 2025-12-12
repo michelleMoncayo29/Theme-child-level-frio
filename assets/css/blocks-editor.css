@@ -113,3 +113,32 @@
     display: block;
 }
 
+/* ==========================================================================
+   CARRUSEL DE SERVICIOS - EDITOR
+   ========================================================================== */
+
+/* Ajustes para el editor */
+.editor-styles-wrapper .mwm-carrusel {
+    min-height: auto;
+}
+
+.editor-styles-wrapper .mwm-carrusel .row {
+    min-height: 500px;
+}
+
+.editor-styles-wrapper .carousel-panel {
+    overflow-x: auto;
+}
+
+/* Preview del carrusel sin JS */
+.editor-styles-wrapper .mwm-swiper-servicios .swiper-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.editor-styles-wrapper .mwm-swiper-servicios .swiper-slide {
+    flex: 0 0 auto;
+    width: calc(40% - 10px);
+    min-width: 250px;
+}
+

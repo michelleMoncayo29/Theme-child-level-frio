@@ -50,6 +50,32 @@ function theme_child_enqueue_styles() {
         array('theme-child-style'),
         wp_get_theme()->get('Version')
     );
+
+    // Swiper CSS
+    wp_enqueue_style(
+        'swiper',
+        get_stylesheet_directory_uri() . '/assets/js/swiper/swiper-bundle.min.css',
+        array(),
+        '11.0.0'
+    );
+
+    // Swiper JS
+    wp_enqueue_script(
+        'swiper',
+        get_stylesheet_directory_uri() . '/assets/js/swiper/swiper-bundle.min.js',
+        array(),
+        '11.0.0',
+        true
+    );
+
+    // Scripts personalizados
+    wp_enqueue_script(
+        'theme-child-scripts',
+        get_stylesheet_directory_uri() . '/assets/js/scripts.js',
+        array('swiper'),
+        wp_get_theme()->get('Version'),
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'theme_child_enqueue_styles');
 

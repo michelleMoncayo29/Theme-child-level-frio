@@ -1,0 +1,129 @@
+{
+    "key": "group_carrusel_servicios",
+    "title": "Carrusel de Servicios - Campos",
+    "fields": [
+        {
+            "key": "field_carrusel_tab_contenido",
+            "label": "Contenido",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_carrusel_titulo",
+            "label": "Título",
+            "name": "titulo",
+            "type": "textarea",
+            "instructions": "Título principal del panel. Usa Enter para crear saltos de línea.",
+            "required": 0,
+            "rows": 2,
+            "placeholder": "Nuestros\nservicios",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_carrusel_subtitulo",
+            "label": "Subtítulo",
+            "name": "subtitulo",
+            "type": "textarea",
+            "instructions": "Subtítulo destacado. Usa Enter para crear saltos de línea.",
+            "required": 0,
+            "rows": 2,
+            "placeholder": "Soluciones técnicas\npersonalizadas",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_carrusel_descripcion",
+            "label": "Descripción",
+            "name": "descripcion",
+            "type": "textarea",
+            "instructions": "Texto descriptivo del panel izquierdo.",
+            "required": 0,
+            "rows": 3,
+            "placeholder": "Para grandes instalaciones y empresas..."
+        },
+        {
+            "key": "field_carrusel_tab_servicios",
+            "label": "Servicios",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_carrusel_servicios",
+            "label": "Servicios",
+            "name": "servicios",
+            "type": "repeater",
+            "instructions": "Añade los servicios que se mostrarán en el carrusel.",
+            "required": 0,
+            "min": 0,
+            "max": 20,
+            "layout": "block",
+            "button_label": "Añadir servicio",
+            "sub_fields": [
+                {
+                    "key": "field_servicio_imagen",
+                    "label": "Imagen",
+                    "name": "imagen",
+                    "type": "image",
+                    "instructions": "Imagen del servicio (recomendado: 600x400px)",
+                    "required": 0,
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "mime_types": "jpg, jpeg, png, webp"
+                },
+                {
+                    "key": "field_servicio_titulo",
+                    "label": "Título",
+                    "name": "titulo",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "placeholder": "Nombre del servicio"
+                },
+                {
+                    "key": "field_servicio_descripcion",
+                    "label": "Descripción",
+                    "name": "descripcion",
+                    "type": "text",
+                    "instructions": "Breve descripción del servicio.",
+                    "required": 0,
+                    "placeholder": "Descripción corta..."
+                }
+            ]
+        },
+        {
+            "key": "field_carrusel_tab_estilos",
+            "label": "Estilos",
+            "name": "",
+            "type": "tab",
+            "placement": "top"
+        },
+        {
+            "key": "field_carrusel_color_fondo_panel",
+            "label": "Color de fondo del panel",
+            "name": "color_fondo_panel",
+            "type": "color_picker",
+            "instructions": "Color de fondo del panel izquierdo.",
+            "required": 0,
+            "default_value": "#e8f4f8",
+            "enable_opacity": false
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/carrusel-servicios"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}
+

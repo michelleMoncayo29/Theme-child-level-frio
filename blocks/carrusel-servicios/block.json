@@ -1,0 +1,40 @@
+{
+    "name": "acf/carrusel-servicios",
+    "title": "Carrusel de Servicios",
+    "description": "Carrusel de tarjetas de servicios con panel informativo lateral.",
+    "category": "theme-child-blocks",
+    "icon": "slides",
+    "keywords": ["carrusel", "servicios", "slider", "swiper", "tarjetas"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/carrusel-servicios/render.php"
+    },
+    "align": "full",
+    "supports": {
+        "align": ["full", "wide"],
+        "anchor": true,
+        "jsx": true
+    },
+    "styles": [
+        {
+            "name": "default",
+            "label": "Por defecto",
+            "isDefault": true
+        },
+        {
+            "name": "dark",
+            "label": "Fondo oscuro"
+        }
+    ],
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "titulo": "Nuestros servicios",
+                "subtitulo": "Soluciones técnicas personalizadas",
+                "descripcion": "Para grandes instalaciones y empresas, así como para viviendas y proyectos residenciales."
+            }
+        }
+    }
+}
+
