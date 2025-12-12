@@ -1,0 +1,36 @@
+{
+    "name": "acf/meta-informativo",
+    "title": "Meta Informativo",
+    "description": "Muestra información del proyecto: año, ubicación y categoría con iconos.",
+    "category": "theme-child-blocks",
+    "icon": "info-outline",
+    "keywords": ["meta", "información", "año", "ubicación", "categoría", "proyecto"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/meta-informativo/render.php"
+    },
+    "supports": {
+        "align": ["left", "center", "right", "wide"],
+        "anchor": true,
+        "jsx": true
+    },
+    "styles": [
+        {
+            "name": "vertical",
+            "label": "Vertical",
+            "isDefault": true
+        },
+        {
+            "name": "horizontal",
+            "label": "Horizontal"
+        }
+    ],
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {}
+        }
+    }
+}
+
+

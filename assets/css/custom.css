@@ -1,0 +1,634 @@
+/**
+ * Estilos personalizados - Theme Child
+ * 
+ * Estilos adicionales para el tema hijo de Twenty Twenty-Five
+ */
+
+/* ==========================================================================
+   VARIABLES CSS PERSONALIZADAS
+   ========================================================================== */
+
+:root {
+    /* Colores */
+    --theme-color-primary: #29ABE2;
+    --theme-color-secondary: #161616;
+    --theme-color-grey-light: #F8F8F8;
+    --theme-color-grey-dark: #717171;
+    --theme-gradient-primary: linear-gradient(90deg, #29ABE2 0%, #2E438F 100%);
+    
+    /* Colores de estado */
+    --theme-color-error: #D32F2F;
+    --theme-color-warning: #F5A974;
+    --theme-color-success: #4CAF50;
+    
+    /* Tipografía */
+    --theme-font-primary: 'Sora', sans-serif;
+    --theme-font-mono: 'SUSE Mono', monospace;
+}
+
+/* ==========================================================================
+   TIPOGRAFÍA RESPONSIVE
+   ========================================================================== */
+
+/* Encabezados */
+h1, .has-xxx-large-font-size {
+    font-family: var(--theme-font-primary);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+}
+
+h2, .has-xx-large-font-size {
+    font-family: var(--theme-font-primary);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+}
+
+h3, .has-x-large-font-size {
+    font-family: var(--theme-font-primary);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+}
+
+h4, h5, h6, .has-large-font-size {
+    font-family: var(--theme-font-primary);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+/* Tamaños responsive para móvil */
+@media (max-width: 781px) {
+    h1, .has-xxx-large-font-size {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    h2, .has-xx-large-font-size {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    h3, .has-x-large-font-size {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    h4, h5, h6, .has-large-font-size {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+/* Tamaños para desktop */
+@media (min-width: 782px) {
+    h1, .has-xxx-large-font-size {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    
+    h2, .has-xx-large-font-size {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    
+    h3, .has-x-large-font-size {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    
+    h4, h5, h6, .has-large-font-size {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+/* ==========================================================================
+   TAMAÑOS DE TEXTO
+   ========================================================================== */
+
+/* Párrafo normal (medium - 16px) */
+p, 
+.has-medium-font-size,
+body {
+    font-family: var(--theme-font-primary);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Tamaño pequeño (small - 14px) */
+.has-small-font-size,
+small {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* Tamaño extra pequeño (x-small - 12px) */
+.has-x-small-font-size {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+/* ==========================================================================
+   CLASES DE UTILIDAD PARA COLORES
+   ========================================================================== */
+
+/* Background colors */
+.has-primary-background-color {
+    background-color: var(--theme-color-primary);
+}
+
+.has-secondary-background-color {
+    background-color: var(--theme-color-secondary);
+}
+
+.has-grey-light-background-color {
+    background-color: var(--theme-color-grey-light);
+}
+
+.has-grey-dark-background-color {
+    background-color: var(--theme-color-grey-dark);
+}
+
+/* Text colors */
+.has-primary-color {
+    color: var(--theme-color-primary);
+}
+
+.has-secondary-color {
+    color: var(--theme-color-secondary);
+}
+
+.has-grey-light-color {
+    color: var(--theme-color-grey-light);
+}
+
+.has-grey-dark-color {
+    color: var(--theme-color-grey-dark);
+}
+
+/* Gradiente */
+.has-primary-gradient-background {
+    background: var(--theme-gradient-primary);
+}
+
+/* ==========================================================================
+   MEJORAS GENERALES
+   ========================================================================== */
+
+/* Suavizar transiciones */
+a,
+button,
+.wp-block-button__link {
+    transition: all 0.3s ease;
+}
+
+/* Estilos para código */
+code,
+pre,
+.wp-block-code,
+.wp-block-preformatted {
+    font-family: var(--theme-font-mono);
+}
+
+/* ==========================================================================
+   MEJORAS DE ACCESIBILIDAD
+   ========================================================================== */
+
+/* Focus visible mejorado */
+:focus-visible {
+    outline: 2px solid var(--theme-color-primary);
+    outline-offset: 2px;
+}
+
+/* Skip link */
+.skip-link:focus {
+    background-color: var(--theme-color-primary);
+    color: #fff;
+}
+
+/* ==========================================================================
+   FORMULARIOS - INPUTS, TEXTAREAS, SELECTS
+   ========================================================================== */
+
+/* Labels */
+label,
+.form-label {
+    display: block;
+    font-family: var(--theme-font-primary);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--theme-color-grey-dark);
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+/* Input base styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+textarea,
+select {
+    width: 100%;
+    font-family: var(--theme-font-primary);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--theme-color-secondary);
+    background-color: transparent;
+    border: 1px solid var(--theme-color-grey-dark);
+    border-radius: 0;
+    padding: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+    color: var(--theme-color-grey-dark);
+    font-style: normal;
+    opacity: 1;
+}
+
+/* Hover state */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+input[type="url"]:hover,
+input[type="tel"]:hover,
+input[type="number"]:hover,
+input[type="date"]:hover,
+input[type="datetime-local"]:hover,
+input[type="month"]:hover,
+input[type="week"]:hover,
+input[type="time"]:hover,
+textarea:hover,
+select:hover {
+    border-color: var(--theme-color-secondary);
+}
+
+/* Focus state (filled) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--theme-color-secondary);
+    border-width: 2px;
+    padding: 11px 43px 11px 15px;
+}
+
+/* Focus state (empty) - cuando está vacío y en focus */
+input[type="text"]:focus:placeholder-shown,
+input[type="email"]:focus:placeholder-shown,
+input[type="password"]:focus:placeholder-shown,
+input[type="search"]:focus:placeholder-shown,
+input[type="url"]:focus:placeholder-shown,
+input[type="tel"]:focus:placeholder-shown,
+input[type="number"]:focus:placeholder-shown,
+textarea:focus:placeholder-shown {
+    border-color: var(--theme-color-warning);
+}
+
+/* Error state */
+input.has-error,
+input.error,
+input:invalid:not(:placeholder-shown),
+textarea.has-error,
+textarea.error,
+textarea:invalid:not(:placeholder-shown),
+select.has-error,
+select.error,
+.form-field-error input,
+.form-field-error textarea,
+.form-field-error select {
+    border-color: var(--theme-color-error);
+    border-width: 2px;
+    padding: 11px 43px 11px 15px;
+    color: var(--theme-color-error);
+}
+
+input.has-error::placeholder,
+input.error::placeholder,
+textarea.has-error::placeholder,
+textarea.error::placeholder {
+    color: var(--theme-color-error);
+}
+
+/* Disabled state */
+input:disabled,
+textarea:disabled,
+select:disabled {
+    background-color: var(--theme-color-grey-light);
+    border-color: var(--theme-color-grey-dark);
+    color: var(--theme-color-grey-dark);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Textarea específicos */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+    padding: 12px 16px;
+}
+
+textarea:focus {
+    padding: 11px 15px;
+}
+
+/* Select específicos */
+select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23717171' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    padding-right: 44px;
+}
+
+/* ==========================================================================
+   CHECKBOXES Y RADIOS
+   ========================================================================== */
+
+/* Checkbox container */
+.checkbox-wrapper,
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+/* Hide default checkbox/radio */
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Custom checkbox */
+.checkbox-custom,
+input[type="checkbox"] + label::before,
+.wpcf7-checkbox .wpcf7-list-item-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border: 2px solid var(--theme-color-grey-dark);
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 0.2s ease;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+/* Checkbox hover */
+input[type="checkbox"]:hover + label::before,
+input[type="checkbox"]:hover + .checkbox-custom,
+.checkbox-wrapper:hover .checkbox-custom {
+    border-color: var(--theme-color-secondary);
+}
+
+/* Checkbox checked */
+input[type="checkbox"]:checked + label::before,
+input[type="checkbox"]:checked + .checkbox-custom,
+.wpcf7-checkbox input:checked + .wpcf7-list-item-label::before {
+    background-color: var(--theme-color-primary);
+    border-color: var(--theme-color-primary);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+}
+
+/* Checkbox focus state */
+input[type="checkbox"]:focus + label::before,
+input[type="checkbox"]:focus + .checkbox-custom {
+    border-color: var(--theme-color-primary);
+    box-shadow: 0 0 0 2px rgba(41, 171, 226, 0.2);
+}
+
+/* Checkbox error state */
+input[type="checkbox"].has-error + label::before,
+input[type="checkbox"].error + label::before,
+.form-field-error input[type="checkbox"] + label::before {
+    border-color: var(--theme-color-error);
+}
+
+input[type="checkbox"].has-error + label,
+input[type="checkbox"].error + label,
+.form-field-error input[type="checkbox"] + label {
+    color: var(--theme-color-error);
+}
+
+/* Custom radio */
+input[type="radio"] + label::before,
+.radio-custom {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border: 2px solid var(--theme-color-grey-dark);
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.2s ease;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+/* Radio hover */
+input[type="radio"]:hover + label::before,
+.radio-wrapper:hover .radio-custom {
+    border-color: var(--theme-color-secondary);
+}
+
+/* Radio checked */
+input[type="radio"]:checked + label::before,
+input[type="radio"]:checked + .radio-custom {
+    border-color: var(--theme-color-primary);
+    border-width: 7px;
+}
+
+/* Radio focus */
+input[type="radio"]:focus + label::before {
+    box-shadow: 0 0 0 2px rgba(41, 171, 226, 0.2);
+}
+
+/* Checkbox/Radio label styling */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--theme-font-primary);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--theme-color-secondary);
+    cursor: pointer;
+    margin-bottom: 0;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   FORM GROUPS Y MENSAJES
+   ========================================================================== */
+
+/* Form group container */
+.form-group,
+.form-field {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+/* Input wrapper con icono */
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input {
+    padding-right: 44px;
+}
+
+/* Icono dentro del input */
+.input-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--theme-color-grey-dark);
+    pointer-events: none;
+}
+
+/* Icono de error */
+.input-icon-error,
+.form-field-error .input-icon {
+    color: var(--theme-color-error);
+}
+
+/* Mensaje de error */
+.error-message,
+.form-error,
+.field-error {
+    display: block;
+    font-family: var(--theme-font-primary);
+    font-size: 12px;
+    color: var(--theme-color-error);
+    margin-top: 4px;
+}
+
+/* Mensaje de ayuda */
+.help-text,
+.form-help {
+    display: block;
+    font-family: var(--theme-font-primary);
+    font-size: 12px;
+    color: var(--theme-color-grey-dark);
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   CONTACT FORM 7 ESPECÍFICOS
+   ========================================================================== */
+
+.wpcf7-form-control-wrap {
+    display: block;
+    position: relative;
+}
+
+.wpcf7-not-valid {
+    border-color: var(--theme-color-error) !important;
+    border-width: 2px !important;
+}
+
+.wpcf7-not-valid-tip {
+    font-family: var(--theme-font-primary);
+    font-size: 12px;
+    color: var(--theme-color-error);
+    margin-top: 4px;
+}
+
+.wpcf7-response-output {
+    font-family: var(--theme-font-primary);
+    font-size: 14px;
+    padding: 16px;
+    border-radius: 4px;
+    margin-top: 24px;
+}
+
+.wpcf7-validation-errors {
+    border-color: var(--theme-color-error);
+    background-color: rgba(211, 47, 47, 0.1);
+    color: var(--theme-color-error);
+}
+
+.wpcf7-mail-sent-ok {
+    border-color: var(--theme-color-success);
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--theme-color-success);
+}
+
+/* WPCF7 Checkbox styling */
+.wpcf7-checkbox .wpcf7-list-item,
+.wpcf7-radio .wpcf7-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.wpcf7-checkbox .wpcf7-list-item-label,
+.wpcf7-radio .wpcf7-list-item-label {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--theme-font-primary);
+    font-size: 16px;
+    color: var(--theme-color-secondary);
+    cursor: pointer;
+}
+
+/* ================================================================
+   Adaptando bloques con clase MWM
+   ================================================================ */
+/* LIST ICON MWM */
+.list-icon-mwm > figure{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+}   
+
+.list-none{
+    list-style: none;
+}

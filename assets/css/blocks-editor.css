@@ -1,0 +1,115 @@
+/**
+ * Estilos de Bloques ACF - Editor
+ * 
+ * Estilos específicos para la visualización en el editor de WordPress
+ */
+
+/* ==========================================================================
+   ESTILOS BASE DEL EDITOR
+   ========================================================================== */
+
+/* Asegurar que los bloques ACF se vean correctamente en el editor */
+.editor-styles-wrapper .acf-block-preview {
+    font-family: var(--wp--preset--font-family--sora, 'Sora', sans-serif);
+}
+
+/* Importar estilos del frontend */
+@import url('./blocks.css');
+
+/* ==========================================================================
+   AJUSTES ESPECÍFICOS DEL EDITOR
+   ========================================================================== */
+
+/* Mensajes de preview */
+.acf-block-preview .hero__preview-notice,
+.acf-block-preview .block-preview-notice {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Bloques vacíos */
+.acf-block-preview [data-empty="true"] {
+    opacity: 0.5;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   PLACEHOLDER STYLES
+   ========================================================================== */
+
+.acf-block-body .components-placeholder {
+    min-height: 200px;
+}
+
+/* Hero placeholder */
+.block-hero .acf-block-body {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   PANEL DE CAMPOS ACF EN EL EDITOR
+   ========================================================================== */
+
+.acf-block-panel {
+    padding: 16px;
+}
+
+.acf-block-panel .acf-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.acf-block-panel .acf-input {
+    margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   INDICADORES DE MODO
+   ========================================================================== */
+
+/* Indicador de modo preview */
+.acf-block-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--wp--preset--color--primary, #29ABE2);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.acf-block-preview:hover::before {
+    opacity: 1;
+}
+
+/* Indicador de modo edición */
+.acf-block-component.is-mode-edit {
+    border: 2px dashed var(--wp--preset--color--primary, #29ABE2);
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   RESPONSIVE EN EDITOR
+   ========================================================================== */
+
+/* Simular viewport móvil en editor */
+.is-tablet-preview .acf-block-preview,
+.is-mobile-preview .acf-block-preview {
+    font-size: 14px;
+}
+
+.is-mobile-preview .hero--altura-grande {
+    min-height: 350px;
+}
+
+.is-mobile-preview .block-card.is-style-horizontal {
+    display: block;
+}
+

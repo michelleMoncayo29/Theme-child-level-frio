@@ -1,0 +1,472 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"custom": true,
+			"customDuotone": true,
+			"customGradient": true,
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"palette": [
+				{
+					"color": "#29ABE2",
+					"name": "Primary",
+					"slug": "primary"
+				},
+				{
+					"color": "#161616",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+				{
+					"color": "#F8F8F8",
+					"name": "Grey Light",
+					"slug": "grey-light"
+				},
+				{
+					"color": "#717171",
+					"name": "Grey Dark",
+					"slug": "grey-dark"
+				},
+				{
+					"color": "#FFFFFF",
+					"name": "White",
+					"slug": "white"
+				},
+				{
+					"color": "#000000",
+					"name": "Black",
+					"slug": "black"
+				}
+			],
+			"gradients": [
+				{
+					"gradient": "linear-gradient(90deg, #29ABE2 0%, #2E438F 100%)",
+					"name": "Primary Gradient",
+					"slug": "primary-gradient"
+				}
+			]
+		},
+		"typography": {
+			"customFontSize": true,
+			"dropCap": false,
+			"fluid": true,
+			"fontFamilies": [
+				{
+					"fontFamily": "Sora, sans-serif",
+					"name": "Sora",
+					"slug": "sora",
+					"fontFace": [
+						{
+							"fontFamily": "Sora",
+							"fontWeight": "100",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/Sora/static/Sora-Thin.ttf"]
+						},
+						{
+							"fontFamily": "Sora",
+							"fontWeight": "200",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/Sora/static/Sora-ExtraLight.ttf"]
+						},
+						{
+							"fontFamily": "Sora",
+							"fontWeight": "300",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/Sora/static/Sora-Light.ttf"]
+						},
+						{
+							"fontFamily": "Sora",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/Sora/static/Sora-Regular.ttf"]
+						},
+						{
+							"fontFamily": "Sora",
+							"fontWeight": "500",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/Sora/static/Sora-Medium.ttf"]
+						},
+						{
+							"fontFamily": "Sora",
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/Sora/static/Sora-SemiBold.ttf"]
+						},
+						{
+							"fontFamily": "Sora",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/Sora/static/Sora-Bold.ttf"]
+						},
+						{
+							"fontFamily": "Sora",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/Sora/static/Sora-ExtraBold.ttf"]
+						}
+					]
+				},
+				{
+					"fontFamily": "'SUSE Mono', monospace",
+					"name": "SUSE Mono",
+					"slug": "suse-mono",
+					"fontFace": [
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "100",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-Thin.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "200",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-ExtraLight.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "300",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-Light.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-Regular.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "400",
+							"fontStyle": "italic",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-Italic.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "500",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-Medium.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "500",
+							"fontStyle": "italic",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-MediumItalic.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-SemiBold.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "600",
+							"fontStyle": "italic",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-SemiBoldItalic.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-Bold.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "700",
+							"fontStyle": "italic",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-BoldItalic.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "800",
+							"fontStyle": "normal",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-ExtraBold.ttf"]
+						},
+						{
+							"fontFamily": "SUSE Mono",
+							"fontWeight": "800",
+							"fontStyle": "italic",
+							"src": ["file:./fonts/SUSE_Mono/static/SUSEMono-ExtraBoldItalic.ttf"]
+						}
+					]
+				},
+				{
+					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+					"name": "System Font",
+					"slug": "system-font"
+				}
+			],
+			"fontSizes": [
+				{
+					"fluid": false,
+					"name": "Extra Small",
+					"size": "12px",
+					"slug": "x-small"
+				},
+				{
+					"fluid": false,
+					"name": "Small",
+					"size": "14px",
+					"slug": "small"
+				},
+				{
+					"fluid": false,
+					"name": "Medium",
+					"size": "16px",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"min": "24px",
+						"max": "24px"
+					},
+					"name": "Large",
+					"size": "24px",
+					"slug": "large"
+				},
+				{
+					"fluid": {
+						"min": "28px",
+						"max": "32px"
+					},
+					"name": "X-Large",
+					"size": "32px",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"min": "32px",
+						"max": "40px"
+					},
+					"name": "XX-Large",
+					"size": "40px",
+					"slug": "xx-large"
+				},
+				{
+					"fluid": {
+						"min": "28px",
+						"max": "48px"
+					},
+					"name": "XXX-Large",
+					"size": "48px",
+					"slug": "xxx-large"
+				}
+			]
+		},
+		"spacing": {
+			"spacingScale": {
+				"steps": 0
+			},
+			"spacingSizes": [
+				{
+					"name": "1",
+					"size": "1rem",
+					"slug": "10"
+				},
+				{
+					"name": "2",
+					"size": "1.5rem",
+					"slug": "20"
+				},
+				{
+					"name": "3",
+					"size": "2rem",
+					"slug": "30"
+				},
+				{
+					"name": "4",
+					"size": "2.5rem",
+					"slug": "40"
+				},
+				{
+					"name": "5",
+					"size": "3rem",
+					"slug": "50"
+				},
+				{
+					"name": "6",
+					"size": "4rem",
+					"slug": "60"
+				},
+				{
+					"name": "7",
+					"size": "5rem",
+					"slug": "70"
+				},
+				{
+					"name": "8",
+					"size": "6rem",
+					"slug": "80"
+				}
+			],
+			"units": ["%", "px", "em", "rem", "vh", "vw"]
+		},
+		"layout": {
+			"contentSize": "880px",
+			"wideSize": "1104px"
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--white)",
+			"text": "var(--wp--preset--color--secondary)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--sora)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"lineHeight": "1.5"
+		},
+		"spacing": {
+			"blockGap": "1.5rem",
+			"padding": {
+				"top": "0",
+				"right": "1rem",
+				"bottom": "0",
+				"left": "1rem"
+			}
+		},
+		"elements": {
+			"button": {
+				"border": {
+					"radius": "4px"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--white)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sora)",
+					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontWeight": "500"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--white)"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--white)"
+					}
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--secondary)"
+					}
+				},
+				":focus": {
+					"color": {
+						"text": "var(--wp--preset--color--secondary)"
+					}
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sora)",
+					"fontSize": "clamp(28px, 5vw, 48px)",
+					"fontWeight": "400",
+					"lineHeight": "clamp(36px, 5.5vw, 56px)"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sora)",
+					"fontSize": "clamp(32px, 4vw, 40px)",
+					"fontWeight": "400",
+					"lineHeight": "clamp(40px, 4.5vw, 48px)"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sora)",
+					"fontSize": "clamp(28px, 3vw, 32px)",
+					"fontWeight": "400",
+					"lineHeight": "clamp(36px, 3vw, 32px)"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sora)",
+					"fontSize": "24px",
+					"fontWeight": "400",
+					"lineHeight": "32px"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sora)",
+					"fontSize": "24px",
+					"fontWeight": "400",
+					"lineHeight": "32px"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sora)",
+					"fontSize": "24px",
+					"fontWeight": "400",
+					"lineHeight": "32px"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sora)",
+					"fontWeight": "400"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--secondary)"
+				}
+			}
+		},
+		"blocks": {
+			"core/paragraph": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--sora)",
+					"fontSize": "var(--wp--preset--font-size--medium)",
+					"lineHeight": "24px"
+				}
+			},
+			"core/code": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--suse-mono)"
+				}
+			},
+			"core/preformatted": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--suse-mono)"
+				}
+			}
+		}
+	}
+}
+

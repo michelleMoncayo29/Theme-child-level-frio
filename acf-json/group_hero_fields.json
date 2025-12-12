@@ -1,0 +1,141 @@
+{
+    "key": "group_hero_fields",
+    "title": "Hero - Campos",
+    "fields": [
+        {
+            "key": "field_hero_titulo",
+            "label": "Título",
+            "name": "titulo",
+            "type": "text",
+            "instructions": "Título principal del hero",
+            "required": 1,
+            "default_value": "",
+            "placeholder": "Escribe el título aquí..."
+        },
+        {
+            "key": "field_hero_subtitulo",
+            "label": "Subtítulo",
+            "name": "subtitulo",
+            "type": "textarea",
+            "instructions": "Texto descriptivo debajo del título",
+            "required": 0,
+            "rows": 3,
+            "placeholder": "Escribe el subtítulo aquí..."
+        },
+        {
+            "key": "field_hero_imagen_fondo",
+            "label": "Imagen de fondo",
+            "name": "imagen_fondo",
+            "type": "image",
+            "instructions": "Imagen de fondo del hero. Recomendado: 1920x1080px mínimo",
+            "required": 0,
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png, webp"
+        },
+        {
+            "key": "field_hero_altura",
+            "label": "Altura",
+            "name": "altura",
+            "type": "select",
+            "instructions": "Selecciona la altura del hero",
+            "required": 0,
+            "choices": {
+                "pequena": "Pequeña (300px)",
+                "mediana": "Mediana (450px)",
+                "grande": "Grande (600px)",
+                "completa": "Pantalla completa"
+            },
+            "default_value": "grande",
+            "return_format": "value"
+        },
+        {
+            "key": "field_hero_alineacion_texto",
+            "label": "Alineación del texto",
+            "name": "alineacion_texto",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "choices": {
+                "left": "Izquierda",
+                "center": "Centro",
+                "right": "Derecha"
+            },
+            "default_value": "center",
+            "return_format": "value"
+        },
+        {
+            "key": "field_hero_overlay",
+            "label": "Mostrar overlay",
+            "name": "overlay",
+            "type": "true_false",
+            "instructions": "Añade una capa oscura sobre la imagen para mejorar la legibilidad",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_hero_overlay_opacidad",
+            "label": "Opacidad del overlay",
+            "name": "overlay_opacidad",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_hero_overlay",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "default_value": 50,
+            "min": 0,
+            "max": 100,
+            "step": 5
+        },
+        {
+            "key": "field_hero_texto_boton",
+            "label": "Texto del botón",
+            "name": "texto_boton",
+            "type": "text",
+            "instructions": "Dejar vacío para ocultar el botón",
+            "required": 0,
+            "placeholder": "Ej: Conocer más"
+        },
+        {
+            "key": "field_hero_enlace_boton",
+            "label": "Enlace del botón",
+            "name": "enlace_boton",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_hero_texto_boton",
+                        "operator": "!=empty"
+                    }
+                ]
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/hero"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}
+
+

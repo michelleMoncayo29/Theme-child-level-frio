@@ -1,0 +1,184 @@
+/* ==========================================================================
+   RESPONSIVE - MEDIA QUERIES GLOBALES
+   ========================================================================== */
+
+/* Variables de Breakpoints */
+:root {
+    --breakpoint-mobile: 599px;
+    --breakpoint-tablet: 781px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-wide: 1280px;
+}
+
+/* ==========================================================================
+   MOBILE (0px - 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    
+    /* Columnas: Forzar una sola columna en móvil */
+    .wp-block-columns {
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .wp-block-columns > .wp-block-column {
+        flex-basis: 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Grupos con layout flex/row: Apilar en móvil */
+    .wp-block-group.is-layout-flex,
+    .wp-block-group.is-layout-flow {
+        flex-direction: column !important;
+    }
+    
+    /* Row block: Apilar en móvil */
+    .wp-block-group.is-horizontal,
+    [class*="is-layout-flex"][class*="is-nowrap"] {
+        flex-wrap: wrap !important;
+        flex-direction: column !important;
+    }
+    
+    /* Botones: Centrar y full width */
+    .wp-block-buttons {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    
+    .wp-block-buttons > .wp-block-button {
+        width: 100% !important;
+    }
+    
+    /* Galería: 1 columna */
+    .wp-block-gallery {
+        --wp--style--gallery-gap-default: 16px;
+        columns: 1 !important;
+    }
+    
+    /* Ocultar en móvil */
+    .hide-on-mobile,
+    .ocultar-movil {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   TABLET (769px - 1199px)
+   ========================================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    
+    /* Columnas: Máximo 2 columnas en tablet */
+    .wp-block-columns {
+        flex-wrap: wrap !important;
+    }
+    
+    .wp-block-columns > .wp-block-column {
+        flex-basis: calc(50% - 16px) !important;
+        min-width: calc(50% - 16px) !important;
+    }
+    
+    /* Ocultar en tablet */
+    .hide-on-tablet,
+    .ocultar-tablet {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   DESKTOP (1200px+)
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+    
+    /* Ocultar en desktop */
+    .hide-on-desktop,
+    .ocultar-desktop {
+        display: none !important;
+    }
+    
+    /* Mostrar solo en móvil */
+    .show-on-mobile-only,
+    .solo-movil {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   CLASES DE UTILIDAD RESPONSIVE
+   ========================================================================== */
+
+/* Forzar columna única en cualquier viewport */
+.stack-always,
+.columna-unica {
+    flex-direction: column !important;
+}
+
+.stack-always > *,
+.columna-unica > * {
+    flex-basis: 100% !important;
+    width: 100% !important;
+}
+
+/* Forzar stack en móvil (clase manual) */
+@media (max-width: 1199px) {
+    .stack-on-mobile,
+    .apilar-movil {
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .stack-on-mobile > *,
+    .apilar-movil > * {
+        flex-basis: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* Invertir orden en móvil */
+@media (max-width: 768px) {
+    .reverse-on-mobile,
+    .invertir-movil {
+        flex-direction: column-reverse !important;
+    }
+}
+
+/* Gap responsive */
+@media (max-width: 768px) {
+    .wp-block-columns,
+    .wp-block-group.is-layout-flex {
+        gap: 24px !important;
+    }
+}
+
+/* ==========================================================================
+   CLASES PARA CONTROLAR COLUMNAS ESPECÍFICAS
+   ========================================================================== */
+
+/* 2 columnas en tablet, 1 en móvil */
+@media (max-width: 768px) {
+    .cols-1-mobile .wp-block-column {
+        flex-basis: 100% !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .cols-2-tablet .wp-block-column {
+        flex-basis: calc(50% - 16px) !important;
+    }
+}
+
+/* Mantener columnas en móvil (no apilar) */
+.no-stack-mobile {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
+@media (max-width: 599px) {
+    .no-stack-mobile > .wp-block-column {
+        flex-basis: auto !important;
+        width: auto !important;
+    }
+}

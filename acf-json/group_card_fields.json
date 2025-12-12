@@ -1,0 +1,141 @@
+{
+    "key": "group_card_fields",
+    "title": "Tarjeta - Campos",
+    "fields": [
+        {
+            "key": "field_card_tipo_media",
+            "label": "Tipo de media",
+            "name": "tipo_media",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "choices": {
+                "ninguno": "Ninguno",
+                "icono": "Icono",
+                "imagen": "Imagen"
+            },
+            "default_value": "imagen",
+            "return_format": "value"
+        },
+        {
+            "key": "field_card_icono",
+            "label": "Icono",
+            "name": "icono",
+            "type": "image",
+            "instructions": "Sube un icono SVG o PNG (recomendado: 64x64px)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_card_tipo_media",
+                        "operator": "==",
+                        "value": "icono"
+                    }
+                ]
+            ],
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "mime_types": "svg, png"
+        },
+        {
+            "key": "field_card_imagen",
+            "label": "Imagen",
+            "name": "imagen",
+            "type": "image",
+            "instructions": "Imagen de la tarjeta (recomendado: 400x300px)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_card_tipo_media",
+                        "operator": "==",
+                        "value": "imagen"
+                    }
+                ]
+            ],
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png, webp"
+        },
+        {
+            "key": "field_card_titulo",
+            "label": "Título",
+            "name": "titulo",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "placeholder": "Título de la tarjeta"
+        },
+        {
+            "key": "field_card_descripcion",
+            "label": "Descripción",
+            "name": "descripcion",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "rows": 3,
+            "placeholder": "Descripción breve..."
+        },
+        {
+            "key": "field_card_texto_enlace",
+            "label": "Texto del enlace",
+            "name": "texto_enlace",
+            "type": "text",
+            "instructions": "Dejar vacío para ocultar el enlace",
+            "required": 0,
+            "placeholder": "Ej: Ver más"
+        },
+        {
+            "key": "field_card_url_enlace",
+            "label": "URL del enlace",
+            "name": "url_enlace",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_card_texto_enlace",
+                        "operator": "!=empty"
+                    }
+                ]
+            ]
+        },
+        {
+            "key": "field_card_abrir_nueva_ventana",
+            "label": "Abrir en nueva ventana",
+            "name": "abrir_nueva_ventana",
+            "type": "true_false",
+            "instructions": "",
+            "default_value": 0,
+            "ui": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_card_texto_enlace",
+                        "operator": "!=empty"
+                    }
+                ]
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/card"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true
+}
+
+

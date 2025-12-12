@@ -1,0 +1,669 @@
+/**
+ * Estilos de Bloques ACF - Frontend
+ * 
+ * Estilos para los bloques personalizados de Levelfrío
+ */
+
+/* ==========================================================================
+   VARIABLES GLOBALES DE BLOQUES
+   ========================================================================== */
+
+:root {
+    --block-spacing-sm: 1rem;
+    --block-spacing-md: 2rem;
+    --block-spacing-lg: 4rem;
+    --block-spacing-xl: 6rem;
+    --block-radius: 8px;
+    --block-transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   ESTILOS BASE PARA BLOQUES ACF
+   ========================================================================== */
+
+.acf-block {
+    position: relative;
+}
+
+/* ==========================================================================
+   BLOQUE: HERO
+   ========================================================================== */
+
+.block-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--theme-color-grey-light);
+    overflow: hidden;
+}
+
+/* Alturas del hero */
+.hero--altura-pequena {
+    min-height: 300px;
+}
+
+.hero--altura-mediana {
+    min-height: 450px;
+}
+
+.hero--altura-grande {
+    min-height: 600px;
+}
+
+.hero--altura-completa {
+    min-height: 100vh;
+}
+
+/* Overlay */
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--theme-color-secondary);
+    pointer-events: none;
+}
+
+/* Container */
+.hero__container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--wp--style--global--content-size, 1200px);
+    padding: var(--block-spacing-lg) var(--block-spacing-md);
+    margin: 0 auto;
+}
+
+/* Content */
+.hero__content {
+    max-width: 800px;
+}
+
+/* Alineaciones */
+.hero--align-left .hero__content {
+    margin-right: auto;
+    text-align: left;
+}
+
+.hero--align-center .hero__content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero--align-right .hero__content {
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Título */
+.hero__titulo {
+    font-family: var(--theme-font-primary);
+    font-size: clamp(32px, 6vw, 56px);
+    font-weight: 600;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0 0 var(--block-spacing-sm);
+}
+
+/* Subtítulo */
+.hero__subtitulo {
+    font-family: var(--theme-font-primary);
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 var(--block-spacing-md);
+}
+
+/* CTA */
+.hero__cta {
+    margin-top: var(--block-spacing-md);
+}
+
+.hero__boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: var(--block-radius);
+    transition: var(--block-transition);
+}
+
+/* Estilos del hero */
+.block-hero.is-style-dark {
+    background-color: var(--theme-color-secondary);
+}
+
+.block-hero.is-style-gradient {
+    background: var(--theme-gradient-primary);
+}
+
+/* Preview notice */
+.hero__preview-notice {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--theme-color-grey-dark);
+    z-index: 0;
+}
+
+.hero__preview-notice .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   BLOQUE: CARD (TARJETA)
+   ========================================================================== */
+
+.block-card {
+    background-color: #fff;
+    border-radius: var(--block-radius);
+    overflow: hidden;
+    transition: var(--block-transition);
+}
+
+/* Media */
+.card__media {
+    position: relative;
+    overflow: hidden;
+}
+
+.card__imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: var(--block-transition);
+}
+
+.card__icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: var(--theme-color-grey-light);
+    border-radius: var(--block-radius);
+    margin: var(--block-spacing-md);
+}
+
+.card__icono img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Content */
+.card__content {
+    padding: var(--block-spacing-md);
+}
+
+.card__titulo {
+    font-family: var(--theme-font-primary);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--theme-color-secondary);
+    margin: 0 0 var(--block-spacing-sm);
+}
+
+.card__descripcion {
+    font-family: var(--theme-font-primary);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--theme-color-grey-dark);
+    margin: 0 0 var(--block-spacing-md);
+}
+
+.card__enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--theme-color-primary);
+    text-decoration: none;
+    transition: var(--block-transition);
+}
+
+.card__enlace:hover {
+    color: var(--theme-color-secondary);
+    gap: 12px;
+}
+
+.card__enlace-icon {
+    transition: var(--block-transition);
+}
+
+/* Estilos de tarjeta */
+.block-card.is-style-bordered {
+    border: 1px solid var(--theme-color-grey-light);
+    box-shadow: none;
+}
+
+.block-card.is-style-elevated {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.block-card.is-style-elevated:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.block-card.is-style-horizontal {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.block-card.is-style-horizontal .card__imagen {
+    height: 100%;
+    min-height: 200px;
+}
+
+/* ==========================================================================
+   BLOQUE: TESTIMONIAL
+   ========================================================================== */
+
+.block-testimonial {
+    position: relative;
+    padding: var(--block-spacing-lg);
+    margin: 0;
+    border: none;
+    background-color: #fff;
+    border-radius: var(--block-radius);
+}
+
+.testimonial__quote-icon {
+    position: absolute;
+    top: var(--block-spacing-md);
+    left: var(--block-spacing-md);
+    color: var(--theme-color-primary);
+}
+
+/* Rating */
+.testimonial__rating {
+    display: flex;
+    gap: 4px;
+    margin-bottom: var(--block-spacing-sm);
+}
+
+.testimonial__star {
+    color: #FFC107;
+}
+
+.testimonial__star--filled {
+    fill: #FFC107;
+}
+
+/* Texto */
+.testimonial__texto {
+    font-family: var(--theme-font-primary);
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--theme-color-secondary);
+    margin: 0 0 var(--block-spacing-md);
+}
+
+/* Footer */
+.testimonial__footer {
+    display: flex;
+    align-items: center;
+    gap: var(--block-spacing-sm);
+}
+
+.testimonial__foto {
+    flex-shrink: 0;
+}
+
+.testimonial__foto img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial__autor {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial__nombre {
+    font-family: var(--theme-font-primary);
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--theme-color-secondary);
+}
+
+.testimonial__cargo {
+    font-family: var(--theme-font-primary);
+    font-size: 14px;
+    color: var(--theme-color-grey-dark);
+}
+
+/* Estilos de testimonial */
+.block-testimonial.is-style-card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.block-testimonial.is-style-minimal {
+    background-color: transparent;
+    padding: var(--block-spacing-md) 0;
+}
+
+.block-testimonial.is-style-minimal .testimonial__quote-icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: var(--block-spacing-sm);
+}
+
+/* ==========================================================================
+   BLOQUE: CTA (CALL TO ACTION)
+   ========================================================================== */
+
+.block-cta {
+    padding: var(--block-spacing-xl) var(--block-spacing-md);
+    background-color: var(--theme-color-grey-light);
+}
+
+.cta__container {
+    max-width: var(--wp--style--global--content-size, 1200px);
+    margin: 0 auto;
+}
+
+/* Alineaciones */
+.cta--align-left .cta__container {
+    text-align: left;
+}
+
+.cta--align-center .cta__container {
+    text-align: center;
+}
+
+.cta--align-right .cta__container {
+    text-align: right;
+}
+
+/* Content */
+.cta__titulo {
+    font-family: var(--theme-font-primary);
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--theme-color-secondary);
+    margin: 0 0 var(--block-spacing-sm);
+}
+
+.cta__descripcion {
+    font-family: var(--theme-font-primary);
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--theme-color-grey-dark);
+    margin: 0 0 var(--block-spacing-md);
+    max-width: 600px;
+}
+
+.cta--align-center .cta__descripcion {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta--align-right .cta__descripcion {
+    margin-left: auto;
+}
+
+/* Buttons */
+.cta__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--block-spacing-sm);
+}
+
+.cta--align-center .cta__buttons {
+    justify-content: center;
+}
+
+.cta--align-right .cta__buttons {
+    justify-content: flex-end;
+}
+
+.cta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-family: var(--theme-font-primary);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: var(--block-radius);
+    transition: var(--block-transition);
+}
+
+.cta__btn--primary {
+    background-color: var(--theme-color-primary);
+    color: #fff;
+}
+
+.cta__btn--primary:hover {
+    background-color: var(--theme-color-secondary);
+}
+
+.cta__btn--secondary {
+    background-color: transparent;
+    color: var(--theme-color-secondary);
+    border: 2px solid var(--theme-color-secondary);
+}
+
+.cta__btn--secondary:hover {
+    background-color: var(--theme-color-secondary);
+    color: #fff;
+}
+
+/* Estilos de CTA */
+.block-cta.is-style-primary {
+    background-color: var(--theme-color-primary);
+}
+
+.block-cta.is-style-primary .cta__titulo,
+.block-cta.is-style-primary .cta__descripcion {
+    color: #fff;
+}
+
+.block-cta.is-style-primary .cta__btn--primary {
+    background-color: #fff;
+    color: var(--theme-color-primary);
+}
+
+.block-cta.is-style-primary .cta__btn--secondary {
+    border-color: #fff;
+    color: #fff;
+}
+
+.block-cta.is-style-gradient {
+    background: var(--theme-gradient-primary);
+}
+
+.block-cta.is-style-gradient .cta__titulo,
+.block-cta.is-style-gradient .cta__descripcion {
+    color: #fff;
+}
+
+.block-cta.is-style-dark {
+    background-color: var(--theme-color-secondary);
+}
+
+.block-cta.is-style-dark .cta__titulo,
+.block-cta.is-style-dark .cta__descripcion {
+    color: #fff;
+}
+
+/* ==========================================================================
+   CLASES DE UTILIDAD PARA BOTONES
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-family: var(--theme-font-primary);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--block-radius);
+    cursor: pointer;
+    transition: var(--block-transition);
+}
+
+.btn--primary {
+    background-color: var(--theme-color-primary);
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background-color: var(--theme-color-secondary);
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--theme-color-secondary);
+    border: 2px solid var(--theme-color-secondary);
+}
+
+.btn--secondary:hover {
+    background-color: var(--theme-color-secondary);
+    color: #fff;
+}
+
+.btn--white {
+    background-color: #fff;
+    color: var(--theme-color-secondary);
+}
+
+.btn--white:hover {
+    background-color: var(--theme-color-grey-light);
+}
+
+/* ==========================================================================
+   BLOQUE: META INFORMATIVO
+   ========================================================================== */
+
+.block-meta-informativo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilos variantes */
+.block-meta-informativo.is-style-horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.block-meta-informativo.is-style-vertical {
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Item */
+.meta-informativo__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Icono */
+.meta-informativo__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.meta-informativo__icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Contenido */
+.meta-informativo__content {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    font-family: var(--theme-font-primary);
+}
+
+.meta-informativo__label {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--theme-color-secondary);
+}
+
+.meta-informativo__value {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--theme-color-secondary);
+}
+
+/* Preview notice */
+.meta-informativo__preview-notice {
+    padding: 16px;
+    background-color: var(--theme-color-grey-light);
+    border-radius: var(--block-radius);
+    text-align: center;
+    color: var(--theme-color-grey-dark);
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 781px) {
+    .hero--altura-grande {
+        min-height: 450px;
+    }
+    
+    .hero--altura-completa {
+        min-height: 80vh;
+    }
+    
+    .block-card.is-style-horizontal {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta__buttons {
+        flex-direction: column;
+    }
+    
+    .cta__btn {
+        width: 100%;
+    }
+    
+    /* Meta Informativo responsive */
+    .block-meta-informativo.is-style-horizontal {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
