@@ -632,3 +632,9 @@ input[type="radio"] + label {
 .list-none{
     list-style: none;
 }
+
+/* Menus navigational */
+.mwm-menu li a:hover{
+    text-decoration: none;
+    color: var(--theme-color-primary) !important;
+}
