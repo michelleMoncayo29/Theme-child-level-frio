@@ -639,3 +639,78 @@ input[type="radio"] + label {
     color: var(--theme-color-primary) !important;
 }
 
+.mwm-menu li a span:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--theme-color-primary);
+}
+
+.mwm-menu li a span:focus-visible{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--theme-color-primary);
+}
+
+/* CARTAS PROYECTOS */
+.mwm-card-proyect{
+    gap: 2.5rem 1rem !important; 
+}
+
+.mwm-card-proyect > li {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: all 0.8s ease;
+    position: relative;
+}
+
+/* Imagen de la carta proyecto */
+.mwm-card-proyect > li .mwm-card-proyect-img {
+    overflow: hidden;
+}
+
+.mwm-card-proyect > li .mwm-card-proyect-img img {
+    transition: 
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.mwm-card-proyect > li::after {
+    opacity: 0;
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--theme-color-grey-light);
+    background-image: url("data:image/svg+xml,%3Csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpath%20d='M3.32857%200.50004H13.2281M13.2281%200.50004V10.3995M13.2281%200.50004L0.500146%2013.228'%20stroke='%23BDBDBD'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem;
+    z-index: 1;
+    border: 1px solid #BDBDBD
+}
+
+/* Hover: imagen opaca, escala y filtro de color (tono levemente azul por ejemplo) */
+.mwm-card-proyect > li:hover::after {
+    opacity: 1;
+}
+
+.mwm-card-proyect > li:hover .mwm-card-proyect-img img {
+    opacity: 0.70;
+    transform: scale(1.05);
+    filter: brightness(0.92) saturate(1.08) hue-rotate(-8deg);
+}
+
+/* Titulo de la carta en hover */
+.mwm-card-proyect > li:hover .mwm-card-proyect-title {
+    color: var(--theme-color-primary);
+}
+

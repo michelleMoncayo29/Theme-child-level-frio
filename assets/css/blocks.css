@@ -890,6 +890,10 @@
     .info-panel .section-subtitle {
         font-size: 1.3rem;
     }
+
+    .carrusel-columns{
+        flex-direction: column !important;
+    }
 }
 
 @media (max-width: 781px) {
