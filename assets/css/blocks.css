@@ -864,6 +864,74 @@
     color: #fff;
 }
 
+
+
+/* ________________________________________ */
+/* ========================================
+    MWM-SLIDER - Gallery Slider Section
+======================================== */
+
+    .mwm-slider {
+        position: relative;
+        width: 100%;
+    }
+
+    .mwm-slider .swiper {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Navigation Buttons Container */
+    .mwm-slider-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .mwm-slider .slider-btn-prev,
+    .mwm-slider .slider-btn-next {
+        position: static;
+        display: grid;
+        place-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid var(--theme-color-secondary);
+    }
+
+    .mwm-slider .slider-btn-prev::after,
+    .mwm-slider .slider-btn-next::after {
+        display: none;
+    }
+
+    /* Swiper Slide Images */
+    .mwm-slider .swiper-slide {
+        overflow: hidden;
+    }
+
+    .mwm-slider .swiper-slide img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Slider Placeholder */
+    .slider-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 300px;
+        background-color: var(--theme-color-grey-light);
+        border-radius: var(--block-radius);
+        color: var(--theme-color-grey-dark);
+        text-align: center;
+        padding: 40px;
+        font-family: var(--theme-font-primary);
+    }
+
+
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
@@ -891,6 +959,10 @@
 
     .carrusel-columns{
         flex-direction: column !important;
+    }
+
+    .mwm-slider .swiper-slide img {
+        height: 400px;
     }
 }
 
@@ -923,8 +995,19 @@
 }
 
 @media (max-width: 767px) {
+
     .service-card-image {
         height: 220px;
+    }
+
+    .mwm-slider .swiper-slide img {
+        height: 300px;
+    }
+
+    .mwm-slider .slider-btn-prev,
+    .mwm-slider .slider-btn-next {
+        width: 36px;
+        height: 36px;
     }
 }
 

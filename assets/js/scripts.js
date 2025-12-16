@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar todos los carruseles de servicios
     initCarruselServicios();
     
+    // Inicializar todos los sliders de proyectos
+    initSliderProyects();
+    
 });
 
 /**
@@ -57,6 +60,32 @@ function initCarruselServicios() {
 }
 
 /**
+ * Inicializar Slider de Proyectos (Swiper)
+ */
+function initSliderProyects() {
+    const sliders = document.querySelectorAll('.mwm-slider .mwmSlider');
+    
+    sliders.forEach(function(sliderElement) {
+        const sliderId = sliderElement.id;
+        
+        // Buscar los controles asociados a este slider
+        const prevButton = sliderElement.closest('.mwm-slider').querySelector('.slider-btn-prev');
+        const nextButton = sliderElement.closest('.mwm-slider').querySelector('.slider-btn-next');
+        
+        const swiper = new Swiper('#' + sliderId, {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: nextButton,
+                prevEl: prevButton,
+            },
+        });
+    });
+}
+
+/**
  * Re-inicializar carruseles después de que se cargue nuevo contenido
  * Útil para el editor de WordPress
  */
@@ -66,7 +95,10 @@ if (typeof wp !== 'undefined' && wp.domReady) {
         const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 if (mutation.addedNodes.length) {
-                    setTimeout(initCarruselServicios, 100);
+                    setTimeout(function() {
+                        initCarruselServicios();
+                        initSliderProyects();
+                    }, 100);
                 }
             });
         });

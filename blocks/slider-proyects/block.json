@@ -1,0 +1,26 @@
+{
+    "name": "acf/slider-proyects",
+    "title": "Slider Proyectos",
+    "description": "Slider de galería de imágenes del proyecto usando el campo ACF acf_gallery_proyect.",
+    "category": "theme-child-blocks",
+    "icon": "images-alt2",
+    "keywords": ["slider", "galería", "proyecto", "imágenes", "carrusel"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/slider-proyects/render.php"
+    },
+    "align": "full",
+    "supports": {
+        "align": ["full", "wide"],
+        "anchor": true,
+        "jsx": true
+    },
+    "usesContext": ["postId", "postType"],
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {}
+        }
+    }
+}
+

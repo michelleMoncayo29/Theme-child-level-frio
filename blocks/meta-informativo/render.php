@@ -9,8 +9,21 @@
  * @param array $context The context provided to the block by the post or its parent block.
  */
 
-// Obtener el ID del post actual
-$current_post_id = $post_id ?: get_the_ID();
+// Obtener el ID del post actual - priorizar contexto FSE, luego ACF post_id, luego global
+$current_post_id = 0;
+
+// 1. Primero intentar desde el contexto FSE (Query Loop, plantillas)
+if (!empty($context['postId'])) {
+    $current_post_id = $context['postId'];
+}
+// 2. Luego desde ACF post_id
+elseif (!empty($post_id)) {
+    $current_post_id = $post_id;
+}
+// 3. Finalmente desde el loop global
+else {
+    $current_post_id = get_the_ID();
+}
 
 // Campos ACF
 $year = get_field('acf_year_proyect', $current_post_id);
