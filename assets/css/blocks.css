@@ -646,7 +646,6 @@
    ========================================================================== */
 
 .block-carrusel-servicios {
-    width: 100%;
     padding: 0;
 }
 /* Container carrusel */
@@ -673,7 +672,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 34rem;
 }
 
 .info-panel .section-title {
@@ -925,10 +923,6 @@
 }
 
 @media (max-width: 767px) {
-    .carousel-panel {
-        padding: 30px 15px;
-    }
-    
     .service-card-image {
         height: 220px;
     }

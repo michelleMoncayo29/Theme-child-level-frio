@@ -633,6 +633,10 @@ input[type="radio"] + label {
     list-style: none;
 }
 
+/* ================================================================
+   Adaptando bloques con clase MWM: Menus navigational
+================================================================ */
+
 /* Menus navigational */
 .mwm-menu li a:hover{
     text-decoration: none;
@@ -654,6 +658,21 @@ input[type="radio"] + label {
     background-color: transparent;
     color: var(--theme-color-primary);
 }
+
+.mwm-menu-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 1140px) {
+    .mwm-menu-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* ================================================================
+   Adaptando bloques con clase MWM: Cartas proyectos
+================================================================ */
 
 /* CARTAS PROYECTOS */
 .mwm-card-proyect{
@@ -714,3 +733,34 @@ input[type="radio"] + label {
     color: var(--theme-color-primary);
 }
 
+
+/* ================================================================
+   footer
+================================================================ */
+.mwm-footer-link{
+    gap: .5rem;
+}
+
+.mwm-footer-link a{
+    text-decoration: none;
+}
+
+.mwm-footer-direction{
+    justify-content: end;
+}
+
+@media (max-width: 781px) {
+
+    .mwm-footer-copy div{
+        gap: 1rem;
+    }
+    
+    .mwm-footer-legal nav ul{
+        justify-content: start;
+        gap: 1rem;
+    }
+
+    .mwm-footer-direction{
+        justify-content: start;
+    }
+}
