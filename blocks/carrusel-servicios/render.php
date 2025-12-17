@@ -64,11 +64,11 @@ if ($is_preview && empty($servicios)) {
             <!-- Panel izquierdo con información -->
             <div class="info-panel" style="background-color: <?php echo esc_attr($color_fondo_panel); ?>;">
                 <?php if ($titulo) : ?>
-                    <h2 class="section-title"><?php echo nl2br(esc_html($titulo)); ?></h2>
+                    <h2 class="section-title has-xx-large-font-size"><?php echo nl2br(esc_html($titulo)); ?></h2>
                 <?php endif; ?>
                 
                 <?php if ($subtitulo) : ?>
-                    <h3 class="section-subtitle"><?php echo nl2br(esc_html($subtitulo)); ?></h3>
+                    <h3 class="section-subtitle .has-x-large-font-size"><?php echo nl2br(esc_html($subtitulo)); ?></h3>
                 <?php endif; ?>
                 
                 <?php if ($descripcion) : ?>
