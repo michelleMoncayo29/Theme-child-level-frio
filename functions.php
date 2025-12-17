@@ -88,4 +88,28 @@ function theme_child_editor_styles() {
 }
 add_action('after_setup_theme', 'theme_child_editor_styles');
 
+/**
+ * ACF JSON - Ruta de guardado
+ * Guarda los campos ACF en la carpeta acf-json del tema
+ */
+function theme_child_acf_json_save_point($path) {
+    return get_stylesheet_directory() . '/acf-json';
+}
+add_filter('acf/settings/save_json', 'theme_child_acf_json_save_point');
+
+/**
+ * ACF JSON - Ruta de carga
+ * Carga los campos ACF desde la carpeta acf-json del tema
+ */
+function theme_child_acf_json_load_point($paths) {
+    // Eliminar la ruta original (opcional)
+    unset($paths[0]);
+    
+    // Añadir nuestra ruta
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+    
+    return $paths;
+}
+add_filter('acf/settings/load_json', 'theme_child_acf_json_load_point');
+
 

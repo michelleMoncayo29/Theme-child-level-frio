@@ -1,0 +1,27 @@
+{
+    "name": "acf/slider-galeria",
+    "title": "Slider Galería",
+    "description": "Slider de galería de imágenes con campos ACF propios del bloque.",
+    "category": "theme-child-blocks",
+    "icon": "format-gallery",
+    "keywords": ["slider", "galería", "imágenes", "carrusel", "fotos"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/slider-galeria/render.php"
+    },
+    "align": "full",
+    "supports": {
+        "align": ["full", "wide"],
+        "anchor": true,
+        "jsx": true
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "galeria": []
+            }
+        }
+    }
+}
+
