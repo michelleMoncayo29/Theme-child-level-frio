@@ -112,4 +112,31 @@ function theme_child_acf_json_load_point($paths) {
 }
 add_filter('acf/settings/load_json', 'theme_child_acf_json_load_point');
 
+/**
+ * Registrar estilos de botones personalizados MWM
+ */
+function theme_child_register_button_styles() {
+    // Registrar estilos para el bloque de botón
+    register_block_style('core/button', array(
+        'name'  => 'mwm-primary',
+        'label' => __('MWM Primary', 'theme-child'),
+    ));
+
+    register_block_style('core/button', array(
+        'name'  => 'mwm-secondary',
+        'label' => __('MWM Secondary', 'theme-child'),
+    ));
+
+    register_block_style('core/button', array(
+        'name'  => 'mwm-secondary-dark',
+        'label' => __('MWM Secondary Dark', 'theme-child'),
+    ));
+
+    register_block_style('core/button', array(
+        'name'  => 'mwm-ghost',
+        'label' => __('MWM Ghost', 'theme-child'),
+    ));
+}
+add_action('init', 'theme_child_register_button_styles');
+
 

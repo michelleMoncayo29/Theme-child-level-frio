@@ -776,3 +776,252 @@ input[type="radio"] + label {
         justify-content: start;
     }
 }
+
+/* ================================================================
+   BOTONES GUTENBERG - Estilos personalizados MWM
+================================================================ */
+
+/* ===========================================
+   BOTÓN PRINCIPAL (Primary)
+=========================================== */
+.wp-block-button.is-style-mwm-primary .wp-block-button__link,
+.wp-block-button.mwm-btn-primary .wp-block-button__link {
+    background: linear-gradient(90deg, #29ABE2 0%, #2E438F 100%);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0;
+    font-family: var(--theme-font-primary);
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 300ms ease-out;
+}
+
+.wp-block-button.is-style-mwm-primary .wp-block-button__link:hover,
+.wp-block-button.is-style-mwm-primary .wp-block-button__link:focus,
+.wp-block-button.mwm-btn-primary .wp-block-button__link:hover,
+.wp-block-button.mwm-btn-primary .wp-block-button__link:focus {
+    background: #161616;
+    color: #FFFFFF;
+}
+
+/* ===========================================
+   BOTÓN SECUNDARIO (Secondary)
+=========================================== */
+.wp-block-button.is-style-mwm-secondary .wp-block-button__link,
+.wp-block-button.mwm-btn-secondary .wp-block-button__link {
+    background: #F8F8F8;
+    color: #161616;
+    border: 1px solid #BDBDBD;
+    border-radius: 0;
+    font-family: var(--theme-font-primary);
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 300ms ease-out;
+}
+
+.wp-block-button.is-style-mwm-secondary .wp-block-button__link:hover,
+.wp-block-button.is-style-mwm-secondary .wp-block-button__link:focus,
+.wp-block-button.mwm-btn-secondary .wp-block-button__link:hover,
+.wp-block-button.mwm-btn-secondary .wp-block-button__link:focus {
+    background: transparent;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+/* Variante secundaria para fondos oscuros */
+.wp-block-button.is-style-mwm-secondary-dark .wp-block-button__link,
+.wp-block-button.mwm-btn-secondary-dark .wp-block-button__link {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 0;
+    font-family: var(--theme-font-primary);
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 300ms ease-out;
+}
+
+.wp-block-button.is-style-mwm-secondary-dark .wp-block-button__link:hover,
+.wp-block-button.is-style-mwm-secondary-dark .wp-block-button__link:focus,
+.wp-block-button.mwm-btn-secondary-dark .wp-block-button__link:hover,
+.wp-block-button.mwm-btn-secondary-dark .wp-block-button__link:focus {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: background 300ms ease-out, border-color 300ms ease-out, color 300ms ease-out, text-decoration-color 300ms, text-underline-offset 300ms;
+}
+
+/* ===========================================
+   BOTÓN TEXTO/LINK (Ghost)
+=========================================== */
+.wp-block-button.is-style-mwm-ghost .wp-block-button__link,
+.wp-block-button.mwm-btn-ghost .wp-block-button__link {
+    background: transparent;
+    color: #717171;
+    border: 1px solid #717171;
+    border-radius: 0;
+    font-family: var(--theme-font-primary);
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 300ms ease-out;
+}
+
+.wp-block-button.is-style-mwm-ghost .wp-block-button__link:hover,
+.wp-block-button.is-style-mwm-ghost .wp-block-button__link:focus,
+.wp-block-button.mwm-btn-ghost .wp-block-button__link:hover,
+.wp-block-button.mwm-btn-ghost .wp-block-button__link:focus {
+    background: #F8F8F8;
+    border-color: #161616;
+    color: #161616;
+}
+
+/* ===========================================
+   BOTONES CON ICONOS
+=========================================== */
+
+/* Base para botones con icono */
+.wp-block-button.has-icon .wp-block-button__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Icono a la derecha (por defecto) */
+.wp-block-button.has-icon.icon-right .wp-block-button__link {
+    flex-direction: row;
+}
+
+/* Icono a la izquierda */
+.wp-block-button.has-icon.icon-left .wp-block-button__link {
+    flex-direction: row-reverse;
+}
+
+/* Estilos del icono SVG/imagen dentro del botón */
+.wp-block-button.has-icon .wp-block-button__link svg,
+.wp-block-button.has-icon .wp-block-button__link img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform 300ms ease-out;
+}
+
+/* Hover del icono - mover ligeramente */
+.wp-block-button.has-icon.icon-right .wp-block-button__link:hover svg,
+.wp-block-button.has-icon.icon-right .wp-block-button__link:hover img {
+    transform: translateX(4px);
+}
+
+.wp-block-button.has-icon.icon-left .wp-block-button__link:hover svg,
+.wp-block-button.has-icon.icon-left .wp-block-button__link:hover img {
+    transform: translateX(-4px);
+}
+
+/* ===========================================
+   ICONOS PREDEFINIDOS (usando pseudo-elementos)
+=========================================== */
+
+/* Flecha derecha */
+.wp-block-button.has-icon.icon-arrow-right .wp-block-button__link::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3Cpolyline points='12 5 19 12 12 19'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 300ms ease-out;
+}
+
+.wp-block-button.has-icon.icon-arrow-right .wp-block-button__link:hover::after {
+    transform: translateX(4px);
+}
+
+/* Flecha izquierda */
+.wp-block-button.has-icon.icon-arrow-left .wp-block-button__link::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23717171' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='19' y1='12' x2='5' y2='12'%3E%3C/line%3E%3Cpolyline points='12 19 5 12 12 5'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 300ms ease-out;
+}
+
+.wp-block-button.has-icon.icon-arrow-left .wp-block-button__link:hover::before {
+    transform: translateX(-4px);
+}
+
+/* Icono de email/sobre */
+.wp-block-button.has-icon.icon-email .wp-block-button__link::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Icono de teléfono */
+.wp-block-button.has-icon.icon-phone .wp-block-button__link::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Icono de descarga */
+.wp-block-button.has-icon.icon-download .wp-block-button__link::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'%3E%3C/path%3E%3Cpolyline points='7 10 12 15 17 10'%3E%3C/polyline%3E%3Cline x1='12' y1='15' x2='12' y2='3'%3E%3C/line%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Icono de enlace externo */
+.wp-block-button.has-icon.icon-external .wp-block-button__link::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Icono de más/plus */
+.wp-block-button.has-icon.icon-plus .wp-block-button__link::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='5' x2='12' y2='19'%3E%3C/line%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* ===========================================
+   ICONOS CON COLOR OSCURO (para fondos claros)
+=========================================== */
+
+.wp-block-button.is-style-mwm-secondary.has-icon.icon-arrow-right .wp-block-button__link::after,
+.wp-block-button.is-style-mwm-ghost.has-icon.icon-arrow-right .wp-block-button__link::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23161616' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3Cpolyline points='12 5 19 12 12 19'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.wp-block-button.is-style-mwm-secondary.has-icon.icon-email .wp-block-button__link::after,
+.wp-block-button.is-style-mwm-ghost.has-icon.icon-email .wp-block-button__link::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23161616' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* Hover en secundario - cambiar a blanco */
+.wp-block-button.is-style-mwm-secondary.has-icon .wp-block-button__link:hover::after,
+.wp-block-button.is-style-mwm-secondary.has-icon .wp-block-button__link:hover::before {
+    filter: brightness(0) invert(1);
+}
