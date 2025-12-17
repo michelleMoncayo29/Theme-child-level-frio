@@ -1015,6 +1015,21 @@ input[type="radio"] + label {
     color: var(--theme-color-primary);
 }
 
+
+/* Sobrescribiendo estilos de la galería */
+figure.wp-block-gallery.has-nested-images{
+    justify-content: center;
+}
+
+.wp-block-gallery.wp-block-gallery-4{
+    --wp--style--unstable-gallery-gap: 80px;
+    gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) ) 82px;
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image{
+    flex-grow: initial;
+}
+
 /* ================================================================
    footer
 ================================================================ */
