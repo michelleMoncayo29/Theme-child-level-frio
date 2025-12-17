@@ -29,6 +29,19 @@
 /* ==========================================================================
    TIPOGRAFÍA RESPONSIVE
    ========================================================================== */
+a{
+    text-decoration: none;
+}
+
+a:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
 
 /* Encabezados */
 h1, .has-xxx-large-font-size {
@@ -618,164 +631,6 @@ input[type="radio"] + label {
     cursor: pointer;
 }
 
-/* ================================================================
-   Adaptando bloques con clase MWM
-   ================================================================ */
-/* LIST ICON MWM */
-.list-icon-mwm > figure{
-    width: 40px;
-    height: 40px;
-    display: grid;
-    place-content: center;
-}   
-
-.list-none{
-    list-style: none;
-}
-
-/* ================================================================
-   Adaptando bloques con clase MWM: Menus navigational
-================================================================ */
-
-/* Menus navigational */
-.mwm-menu li a:hover{
-    text-decoration: none;
-    color: var(--theme-color-primary) !important;
-}
-
-.mwm-menu li a span:focus{
-    outline: none;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    color: var(--theme-color-primary);
-}
-
-.mwm-menu li a span:focus-visible{
-    outline: none;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    color: var(--theme-color-primary);
-}
-
-.mwm-menu-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-@media (min-width: 600px) and (max-width: 991px) {
-
-    .wp-block-navigation__responsive-container-open:not(.always-shown){
-        display: block;
-    }
-
-    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
-        display: none;
-        position: fixed;
-    }
-}
-
-@media (max-width: 1140px) {
-    .mwm-menu-grid{
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-/* ================================================================
-   Adaptando bloques con clase MWM: Cartas proyectos
-================================================================ */
-
-/* CARTAS PROYECTOS */
-.mwm-card-proyect{
-    gap: 2.5rem 1rem !important; 
-}
-
-.mwm-card-proyect > li {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    transition: all 0.8s ease;
-    position: relative;
-}
-
-/* Imagen de la carta proyecto */
-.mwm-card-proyect > li .mwm-card-proyect-img {
-    overflow: hidden;
-}
-
-.mwm-card-proyect > li .mwm-card-proyect-img img {
-    transition: 
-    opacity 0.4s ease,
-    transform 0.4s ease,
-    filter 0.4s ease;
-}
-
-.mwm-card-proyect > li::after {
-    opacity: 0;
-    cursor: pointer;
-    content: '';
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: var(--theme-color-grey-light);
-    background-image: url("data:image/svg+xml,%3Csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpath%20d='M3.32857%200.50004H13.2281M13.2281%200.50004V10.3995M13.2281%200.50004L0.500146%2013.228'%20stroke='%23BDBDBD'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1rem;
-    z-index: 1;
-    border: 1px solid #BDBDBD
-}
-
-/* Hover: imagen opaca, escala y filtro de color (tono levemente azul por ejemplo) */
-.mwm-card-proyect > li:hover::after {
-    opacity: 1;
-}
-
-.mwm-card-proyect > li:hover .mwm-card-proyect-img img {
-    opacity: 0.70;
-    transform: scale(1.05);
-    filter: brightness(0.92) saturate(1.08) hue-rotate(-8deg);
-}
-
-/* Titulo de la carta en hover */
-.mwm-card-proyect > li:hover .mwm-card-proyect-title {
-    color: var(--theme-color-primary);
-}
-
-
-/* ================================================================
-   footer
-================================================================ */
-.mwm-footer-link{
-    gap: .5rem;
-}
-
-.mwm-footer-link a{
-    text-decoration: none;
-}
-
-.mwm-footer-direction{
-    justify-content: end;
-}
-
-@media (max-width: 781px) {
-
-    .mwm-footer-copy div{
-        gap: 1rem;
-    }
-    
-    .mwm-footer-legal nav ul{
-        justify-content: start;
-        gap: 1rem;
-    }
-
-    .mwm-footer-direction{
-        justify-content: start;
-    }
-}
 
 /* ================================================================
    BOTONES GUTENBERG - Estilos personalizados MWM
@@ -847,6 +702,7 @@ input[type="radio"] + label {
 .wp-block-button.mwm-btn-secondary-dark .wp-block-button__link:focus {
     text-decoration: underline;
     text-underline-offset: 3px;
+    text-decoration-color: currentColor;
     transition: background 300ms ease-out, border-color 300ms ease-out, color 300ms ease-out, text-decoration-color 300ms, text-underline-offset 300ms;
 }
 
@@ -1001,7 +857,7 @@ input[type="radio"] + label {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='5' x2='12' y2='19'%3E%3C/line%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='5' x2='12' y2='19'%3E%3C/line%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -1012,16 +868,180 @@ input[type="radio"] + label {
 
 .wp-block-button.is-style-mwm-secondary.has-icon.icon-arrow-right .wp-block-button__link::after,
 .wp-block-button.is-style-mwm-ghost.has-icon.icon-arrow-right .wp-block-button__link::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23161616' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3Cpolyline points='12 5 19 12 12 19'%3E%3C/polyline%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3Cpolyline points='12 5 19 12 12 19'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 .wp-block-button.is-style-mwm-secondary.has-icon.icon-email .wp-block-button__link::after,
 .wp-block-button.is-style-mwm-ghost.has-icon.icon-email .wp-block-button__link::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23161616' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'%3E%3C/path%3E%3Cpolyline points='22,6 12,13 2,6'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 /* Hover en secundario - cambiar a blanco */
 .wp-block-button.is-style-mwm-secondary.has-icon .wp-block-button__link:hover::after,
 .wp-block-button.is-style-mwm-secondary.has-icon .wp-block-button__link:hover::before {
     filter: brightness(0) invert(1);
+}
+
+
+/* ================================================================
+   Adaptando bloques con clase MWM
+   ================================================================ */
+/* LIST ICON MWM */
+.list-icon-mwm > figure{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+}   
+
+.list-none{
+    list-style: none;
+}
+
+/* ================================================================
+   Adaptando bloques con clase MWM: Menus navigational
+================================================================ */
+
+/* Menus navigational */
+.mwm-menu li a:hover{
+    text-decoration: none;
+    color: var(--theme-color-primary) !important;
+}
+
+.mwm-menu li a span:focus{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--theme-color-primary);
+}
+
+.mwm-menu li a span:focus-visible{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: var(--theme-color-primary);
+}
+
+.mwm-menu-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+
+    .wp-block-navigation__responsive-container-open:not(.always-shown){
+        display: block;
+    }
+
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
+        display: none;
+        position: fixed;
+    }
+}
+
+@media (max-width: 1140px) {
+    .mwm-menu-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* ================================================================
+   Adaptando bloques con clase MWM: Cartas proyectos
+================================================================ */
+
+/* post */
+.mwm-post-card{
+    position: relative;
+}
+
+/* CARTAS PROYECTOS */
+.mwm-card-proyect{
+    gap: 2.5rem 1rem !important; 
+}
+
+.mwm-card-proyect > li {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: all 0.8s ease;
+    position: relative;
+}
+
+/* Imagen de la carta proyecto */
+.mwm-card-proyect > li .mwm-card-proyect-img {
+    overflow: hidden;
+}
+
+.mwm-card-proyect > li .mwm-card-proyect-img img {
+    transition: 
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.mwm-card-proyect > li::after, .mwm-post-card::after {
+    opacity: 0;
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--theme-color-grey-light);
+    background-image: url("data:image/svg+xml,%3Csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpath%20d='M3.32857%200.50004H13.2281M13.2281%200.50004V10.3995M13.2281%200.50004L0.500146%2013.228'%20stroke='%23BDBDBD'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem;
+    z-index: 1;
+    border: 1px solid #BDBDBD
+}
+
+/* Hover: imagen opaca, escala y filtro de color (tono levemente azul por ejemplo) */
+.mwm-card-proyect > li:hover::after, .mwm-post-card:hover::after {
+    opacity: 1;
+}
+
+.mwm-card-proyect > li:hover .mwm-card-proyect-img img {
+    opacity: 0.70;
+    transform: scale(1.05);
+    filter: brightness(0.92) saturate(1.08) hue-rotate(-8deg);
+}
+
+/* Titulo de la carta en hover */
+.mwm-card-proyect > li:hover .mwm-card-proyect-title {
+    color: var(--theme-color-primary);
+}
+
+/* ================================================================
+   footer
+================================================================ */
+.mwm-footer-link{
+    gap: .5rem;
+}
+
+.mwm-footer-link a{
+    text-decoration: none;
+}
+
+.mwm-footer-direction{
+    justify-content: end;
+}
+
+@media (max-width: 781px) {
+
+    .mwm-footer-copy div{
+        gap: 1rem;
+    }
+    
+    .mwm-footer-legal nav ul{
+        justify-content: start;
+        gap: 1rem;
+    }
+
+    .mwm-footer-direction{
+        justify-content: start;
+    }
 }
