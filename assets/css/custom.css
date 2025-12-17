@@ -664,6 +664,18 @@ input[type="radio"] + label {
     grid-template-columns: repeat(2, 1fr);
 }
 
+@media (min-width: 600px) and (max-width: 991px) {
+
+    .wp-block-navigation__responsive-container-open:not(.always-shown){
+        display: block;
+    }
+
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open){
+        display: none;
+        position: fixed;
+    }
+}
+
 @media (max-width: 1140px) {
     .mwm-menu-grid{
         grid-template-columns: repeat(1, 1fr);
