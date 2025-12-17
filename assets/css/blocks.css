@@ -41,7 +41,7 @@
     transition: var(--block-transition);
 }
 
-/* Media */
+/* Media
 .card__media {
     position: relative;
     overflow: hidden;
@@ -72,7 +72,7 @@
 }
 
 /* Content */
-.card__content {
+/* .card__content {
     padding: var(--block-spacing-md);
 }
 
@@ -111,10 +111,10 @@
 
 .card__enlace-icon {
     transition: var(--block-transition);
-}
+} */
 
 /* Estilos de tarjeta */
-.block-card.is-style-bordered {
+/* .block-card.is-style-bordered {
     border: 1px solid var(--theme-color-grey-light);
     box-shadow: none;
 }
@@ -136,7 +136,7 @@
 .block-card.is-style-horizontal .card__imagen {
     height: 100%;
     min-height: 200px;
-}
+} */ */
 
 /* ==========================================================================
    CLASES DE UTILIDAD PARA BOTONES
