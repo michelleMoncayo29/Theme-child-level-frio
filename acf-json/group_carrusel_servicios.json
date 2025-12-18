@@ -13,7 +13,7 @@
             "key": "field_carrusel_titulo",
             "label": "Título",
             "name": "titulo",
-            "type": "textarea",
+            "type": "text",
             "instructions": "Título principal del panel. Usa Enter para crear saltos de línea.",
             "required": 0,
             "rows": 2,
@@ -24,7 +24,7 @@
             "key": "field_carrusel_subtitulo",
             "label": "Subtítulo",
             "name": "subtitulo",
-            "type": "textarea",
+            "type": "text",
             "instructions": "Subtítulo destacado. Usa Enter para crear saltos de línea.",
             "required": 0,
             "rows": 2,
@@ -40,13 +40,6 @@
             "required": 0,
             "rows": 3,
             "placeholder": "Para grandes instalaciones y empresas..."
-        },
-        {
-            "key": "field_carrusel_tab_servicios",
-            "label": "Servicios",
-            "name": "",
-            "type": "tab",
-            "placement": "top"
         },
         {
             "key": "field_carrusel_servicios",
@@ -91,23 +84,6 @@
                     "placeholder": "Descripción corta..."
                 }
             ]
-        },
-        {
-            "key": "field_carrusel_tab_estilos",
-            "label": "Estilos",
-            "name": "",
-            "type": "tab",
-            "placement": "top"
-        },
-        {
-            "key": "field_carrusel_color_fondo_panel",
-            "label": "Color de fondo del panel",
-            "name": "color_fondo_panel",
-            "type": "color_picker",
-            "instructions": "Color de fondo del panel izquierdo.",
-            "required": 0,
-            "default_value": "#e8f4f8",
-            "enable_opacity": false
         }
     ],
     "location": [
