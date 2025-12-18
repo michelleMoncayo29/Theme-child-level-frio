@@ -126,11 +126,11 @@ h4, h5, h6, .has-large-font-size {
 
 /* Párrafo normal (medium - 16px) */
 p, 
-.has-medium-font-size,
+.has-medium-font-size, input, select, textarea, label, option, optgroup, legend, fieldset, textarea, select, option, optgroup, legend, fieldset, 
 body {
     font-family: var(--theme-font-primary);
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 /* Tamaño pequeño (small - 14px) */
@@ -232,12 +232,8 @@ pre,
 label,
 .form-label {
     display: block;
-    font-family: var(--theme-font-primary);
-    font-size: 14px;
-    font-weight: 400;
     color: var(--theme-color-grey-dark);
     margin-bottom: 8px;
-    font-style: italic;
 }
 
 /* FIELDS */
@@ -266,6 +262,7 @@ input[type=datetime-local],
 input[type=color],
 textarea,
 select {
+  font-family: var(--theme-font-primary);
   border: 1px solid var(--theme-color-grey-dark);
   color: var(--theme-color-secondary);
   display: block;
@@ -417,24 +414,24 @@ input[type=checkbox] {
   border: 1px solid var(--theme-color-grey-dark);
   border-radius: 50%;
   cursor: pointer;
-  height: 0.875rem;
-  margin-right: 0.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
   position: relative;
   vertical-align: middle;
-  width: 0.875rem;
+  width: 1.5rem;
 }
 input[type=radio]:checked::after,
 input[type=checkbox]:checked::after {
-  background: var(--theme-color-secondary);
+  background: var(--theme-color-primary);
   border-radius: 50%;
   content: "";
   display: block;
-  height: 0.375rem;
+  height: 1rem;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 0.375rem;
+  width: 1rem;
 }
 
 input[type=checkbox] {
@@ -505,7 +502,14 @@ input[type=checkbox]:checked::after {
 
 /* ==========================================================================
    CONTACT FORM 7 ESPECÍFICOS
-   ========================================================================== */
+========================================================================== */
+
+
+.column-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
 .wpcf7-form-control-wrap {
     display: block;
@@ -560,6 +564,10 @@ input[type=checkbox]:checked::after {
     font-size: 16px;
     color: var(--theme-color-secondary);
     cursor: pointer;
+}
+
+.wpcf7-list-item{
+    margin: 0;
 }
 
 
