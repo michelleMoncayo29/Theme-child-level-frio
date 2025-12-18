@@ -570,6 +570,21 @@ input[type=checkbox]:checked::after {
     margin: 0;
 }
 
+/* tabla */
+table{
+    overflow: hidden;
+    border-radius: .25rem;
+}
+
+table > thead{
+    background-color: var(--theme-color-secondary);
+    color: var(--theme-color-primary);    
+}
+
+table > thead th{
+    font-family: var(--theme-font-mono);
+    font-weight: 400;
+}
 
 /* ================================================================
    BOTONES GUTENBERG - Estilos personalizados MWM
@@ -835,6 +850,14 @@ input[type=checkbox]:checked::after {
 
 .list-none{
     list-style: none;
+}
+
+.wp-block-list{
+    padding-left: 16px;
+}
+
+li, li a{
+    white-space: pre-wrap;
 }
 
 /* ================================================================
