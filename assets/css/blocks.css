@@ -267,6 +267,7 @@
 
 .block-carrusel-servicios {
     padding: 0;
+    overflow: hidden;
 }
 /* Container carrusel */
 .container-carrusel{
@@ -284,6 +285,7 @@
     padding-top: 2rem;
     padding-bottom: 3rem;
     padding-right: 3rem;
+    z-index: 4;
 }
 
 .info-panel::after {
@@ -369,6 +371,12 @@
     font-weight: 400;
 }
 
+
+.carousel-panel .swiper{
+    overflow: visible;
+    height: 100%;
+}
+
 /* Panel del carrusel */
 .carousel-panel {
     position: absolute;
@@ -376,12 +384,23 @@
     right: 0;
     width: 67%;
     height: 100%;
+    padding-left: 72px;
+}
+
+.carousel-panel::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    background-color: white;
+    right: calc(100% - 72px);
+    height: 100%;
+    width:4.5rem;
+    z-index:4;
 }
 
 .mwm-swiper-servicios {
     width: 100%;
     height: auto;
-    overflow: visible;
 }
 
 .mwm-swiper-servicios .swiper-wrapper {
@@ -401,7 +420,7 @@
 }
 
 .service-card-image {
-    aspect-ratio: 0.76;
+    flex-grow: 1;
     width: 100%;
     overflow: hidden;
     border-radius: 0;
@@ -419,7 +438,7 @@
 }
 
 .service-card-content {
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 0;
 }
 
 .service-card-title {
@@ -429,8 +448,15 @@
 }
 
 .service-card-description {
-    font-size: 1rem;
-    color: var(--theme-color-secondary)
+    color: var(--theme-color-secondary);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    height: 48px;
+    line-height: 24px;
 }
 
 /* Placeholder */
@@ -577,6 +603,12 @@
     .carousel-panel {
         position: static;
         width: 100%;
+        padding-left: 0;
+    }
+
+    .carousel-panel::after{
+        content: none;
+        display: none;
     }
 
     .mwm-slider .swiper-slide img {

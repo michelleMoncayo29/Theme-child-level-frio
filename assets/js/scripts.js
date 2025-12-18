@@ -30,9 +30,10 @@ function initCarruselServicios() {
         
         const swiper = new Swiper('#' + swiperId, {
             slidesPerView: 1.2,
-            spaceBetween: 20,
+            spaceBetween: 16,
             freeMode: false,
             grabCursor: true,
+            loop: true,
             pagination: {
                 el: pagination,
                 type: 'fraction',
@@ -44,15 +45,9 @@ function initCarruselServicios() {
             breakpoints: {
                 576: {
                     slidesPerView: 1.5,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2.2,
-                    spaceBetween: 20,
                 },
                 1200: {
-                    slidesPerView: 2.5,
-                    spaceBetween: 24,
+                    slidesPerView: 2,
                 },
             }
         });
