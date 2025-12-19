@@ -609,7 +609,7 @@ table > thead th{
 .wp-block-button.is-style-mwm-primary .wp-block-button__link:focus,
 .wp-block-button.mwm-btn-primary .wp-block-button__link:hover,
 .wp-block-button.mwm-btn-primary .wp-block-button__link:focus {
-    background: #161616;
+    background: var(--theme-color-secondary);
     color: #FFFFFF;
 }
 
@@ -619,7 +619,7 @@ table > thead th{
 .wp-block-button.is-style-mwm-secondary .wp-block-button__link,
 .wp-block-button.mwm-btn-secondary .wp-block-button__link {
     background: #F8F8F8;
-    color: #161616;
+    color: var(--theme-color-secondary);
     border: 1px solid #BDBDBD;
     border-radius: 0;
     font-family: var(--theme-font-primary);
@@ -666,8 +666,8 @@ table > thead th{
 .wp-block-button.is-style-mwm-ghost .wp-block-button__link,
 .wp-block-button.mwm-btn-ghost .wp-block-button__link {
     background: transparent;
-    color: #717171;
-    border: 1px solid #717171;
+    color: var(--theme-color-grey-dark);
+    border: 1px solid var(--theme-color-grey-dark);
     border-radius: 0;
     font-family: var(--theme-font-primary);
     font-weight: 400;
@@ -680,8 +680,8 @@ table > thead th{
 .wp-block-button.mwm-btn-ghost .wp-block-button__link:hover,
 .wp-block-button.mwm-btn-ghost .wp-block-button__link:focus {
     background: #F8F8F8;
-    border-color: #161616;
-    color: #161616;
+    border-color: var(--theme-color-secondary);
+    color: var(--theme-color-secondary);
 }
 
 /* ===========================================
@@ -864,6 +864,21 @@ li, li a{
    Adaptando bloques con clase MWM: Menus navigational
 ================================================================ */
 
+.mwm-max-menu{
+    max-width: 83rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+    padding: 1rem 2rem;
+}
+
+.wp-block-navigation.items-justified-right{
+    --navigation-layout-justification-setting: center;
+    --navigation-layout-justify: center !important;
+}
+
 /* Menus navigational */
 .mwm-menu li a:hover{
     text-decoration: none;
@@ -910,10 +925,64 @@ li, li a{
 }
 
 /* ================================================================
+   navegación paginación bloques query
+================================================================ */
+.wp-block-query-pagination-next, .wp-block-query-pagination-previous {  
+    background: var(--theme-color-primary);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0;
+    font-family: var(--theme-font-primary);
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 300ms ease-out;
+    padding: 1rem 2.25rem;
+}
+
+.wp-block-query-pagination-next:hover, .wp-block-query-pagination-next:focus,
+.wp-block-query-pagination-previous:hover, .wp-block-query-pagination-previous:focus {
+    background: var(--theme-color-secondary);
+    color: #FFFFFF;
+}
+
+.wp-block-query-pagination *{
+    font-weight: 400 !important;
+}
+
+.wp-block-query-pagination-numbers{
+    gap: 1.5rem;
+    display: flex;
+}
+
+.page-numbers{
+    display: inline-grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--theme-color-grey-dark);
+    text-decoration: none;
+    color: var(--theme-color-secondary);
+    transition: all 0.3s ease;
+}
+
+.page-numbers.current,
+.page-numbers:hover,
+.page-numbers:focus{
+    background-color: var(--theme-color-grey-light);
+    color: var(--theme-color-grey-dark);
+    border-color: var(--theme-color-grey-dark);
+    border-width: .125rem;
+}
+
+/* ================================================================
    Adaptando bloques con clase MWM: Cartas proyectos
 ================================================================ */
 
 /* post */
+.wp-block-post{
+    display: flex;
+}
+
 .mwm-post-card{
     position: relative;
 }
@@ -1002,7 +1071,7 @@ figure.wp-block-gallery.has-nested-images{
 }
 
 @media (max-width: 781px) {
-    .wp-block-gallery.wp-block-gallery-4{
+    .wp-block-gallery.wp-block-gallery-3{
         --wp--style--unstable-gallery-gap: 80px;
         gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) ) 82px;
     }
